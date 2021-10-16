@@ -22,8 +22,8 @@ public class Connect {
     public String server= "saudecard.database.windows.net";
     public String port= "1433";
     public String database= "SaudeCARD_DB";
-    public String usuario= "appRUN";
-    public String senha= "Voyage@#!";
+    public String usuario= "albatroxdev";
+    public String senha= "Lapsparks02@";
     public String caminho= "jdbc:sqlserver://" + server+ ":"+ port+ ";databaseName=" + database;
     public Statement stmt;
     public ResultSet rs;
