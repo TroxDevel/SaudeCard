@@ -6,6 +6,8 @@
 package saudecard.dadospacket;
 import javax.swing.JFrame;
 
+import saudecard.connectpacket.Connect;
+
 /**
  *
  * @author kevin
@@ -54,6 +56,16 @@ public class Login extends javax.swing.JFrame {
         });
 
         button2.setLabel("Cadastrar");
+        button2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button2MouseClicked(evt);
+            }
+        });
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Usuário");
@@ -132,6 +144,20 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_button1ActionPerformed
 
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
+        // TODO add your handling code here:
+        Login loginUnload = new Login();
+        Cadastro novoUser = new Cadastro();
+        
+        loginUnload.dispose();
+        //novoUser.setVisible(true);
+        //novoUser.setTitle("Cadastro de Novo Usuário");
+    }//GEN-LAST:event_button2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -163,7 +189,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Login login = new Login();
-                saudecard.connectpacket.Connect conDB = new saudecard.connectpacket.Connect();
+                Connect conDB = new Connect();
                 
                 
                 login.setVisible(true);
